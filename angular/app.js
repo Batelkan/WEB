@@ -45,3 +45,5 @@ return {
                           ctrl.$focused = false;}); });
           }
       } }]);
+
+  app.desactivado('')

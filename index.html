@@ -63,11 +63,11 @@ layout-fill  layout-align="center center">
     </div>
     <md-input-container layout="row" class="inputsLogin">
       <md-icon md-svg-src="img/locked.svg" class="email"></md-icon>
-          <input  type="password" placeholder="Contrasena"  name="pass" ng-required="true" ng-model="login.password">
+          <input  type="password" placeholder="Contrasena"  name="pass" ng-required="true" ng-model="password">
     </md-input-container>
 </md-content>
 <md-content layout="column" ng-controller="dialogo">
-    <md-button class="md-raised md-primary" ng-click="showAlert($event)" name="button">
+    <md-button class="md-raised md-primary" ng-disabled="!mail" ng-click="showAlert($event)" name="button">
       <span class="md-body-2">
       ACCEDER</span>
      </md-button>
