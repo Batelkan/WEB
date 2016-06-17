@@ -1,0 +1,67 @@
+
+.formCompus
+{
+  max-width: 650px;
+  border-radius: 8px 8px 8px 8px;
+}
+.formCompusContent
+{
+  border: 2px solid #2196F3;
+  border-bottom: 0px !important;
+}
+
+.formCompusContent textarea
+{
+  min-width: 250px;
+  min-height: 55px;
+}
+
+.formCompusContent md-select
+{
+  /*min-width: 180px;*/
+  min-height: 55px;
+}
+.formCompusCampo
+{
+  min-width: 190px;
+}
+
+.formCompusToolBar
+{
+  border-radius: 8px 8px 0px 0px;
+}
+.formCompusToolBarFeet
+{
+  border-radius: 0px 0px 8px 8px;
+  max-height: 70px;
+  color: yellow;
+}
+
+.formCompuList
+{
+  max-height: 150px;;
+}
+.formCompuListItem
+{
+  height: 80px !important;
+  width: auto;
+  min-height: none !important;
+}
+
+.formCompuListItem md-input-container
+{
+  margin: 0px;
+  padding: 0px;
+}
+.formCompuIconList
+{
+  color: #B0BEC5;
+  margin-right: 10px;
+}
+.SumbmintThemeDark
+{
+  border: 2px solid #FFFF00;
+  border-radius: 4px;
+  color: #FFFF00 !important;
+  font-weight: lighter;
+}

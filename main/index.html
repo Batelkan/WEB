@@ -6,28 +6,287 @@
     <script src="../angular/angular.min.js" ></script>
     <script src="../jquery/jquery-1.12.4.min.js" ></script>
     <script  src="app.js"></script>
-    <link rel="stylesheet" href="estilo1.css">
-        <!-- Angular Material style sheet -->
-     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+    <!--Estilos-->
+      <link rel="stylesheet" href="css/estilo1.css">
+      <link rel="stylesheet" href="css/style_menu.css">
+      <link rel="stylesheet" href="css/metro.min.css">
+      <link rel="stylesheet" href="css/metro-icons.css" >
+    <!-- Angular Material style sheet -->
+      <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
     <!-- Angular Material requires Angular.js Libraries -->
       <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
       <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
       <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
       <!-- Angular Material Library -->
       <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+      <!--Metro CSS3-->
+       <script src="js/metro.js"></script>
+        <script src="js/require.js"></script>
+    <!-- Menu -->
+       <script src="js/script_menu.js"></script>
+       <script src="js/retina.min.js"></script>
 
   </head>
   <body >
       <div class="baseLayout" layout="row" layout-fill>
-        <md-sidenav class="md-sidenav-left md-whiteframe-4dp"  md-is-open="true" md-is-locked-open="true">
-          <md-toolbar class="md-theme-indigo">
-            <h1 class="md-toolbar-tools">Sidenav Right</h1>
+        <md-sidenav class="md-sidenav-left md-whiteframe-4dp" style="background-color: #2196F3; width:auto;min-width: 276px;"  md-is-open="true" md-is-locked-open="true">
+          <md-toolbar class="">
+            <h1 class="md-toolbar-tools">GRUPO DESUR</h1>
           </md-toolbar>
+          <div class="menu">
+            <ul class="mainmenu">
+            		<li><img src="img/user.png" alt="User icon" class="icon"><span>Account<span></li>
+            			<ul class="submenu">
+            				<div class="expand-triangle"><img src="img/expand-blue.png"></div>
+            				<li><span>Basics</span></li>
+            				<li><span>Picture</span></li>
+            				<li><span>Go Premium</span></li>
+            			</ul>
+            		<li><img src="img/envelope.png" alt="Envelope icon" class="icon"><span>Messages</span><div class="messages">23</div></li>
+            			<ul class="submenu">
+            				<div class="expand-triangle"><img src="img/expand-blue.png"></div>
+            				<li><span>New</span></li>
+            				<li><span>Sent</span></li>
+            				<li><span>Trash</span></li>
+            			</ul>
+            		<li><img src="img/cog.png" alt="Cog icon" class="icon"><span>Settings</span></li>
+            			<ul class="submenu">
+            				<div class="expand-triangle"><img src="img/expand-blue.png"></div>
+            				<li><span>Language</span></li>
+            				<li><span>Password</span></li>
+            				<li><span>Notifications</span></li>
+            				<li><span>Privacy</span></li>
+            				<li><span>Payments</span></li>
+            			</ul>
+            		<li><img src="img/key.png" alt="Key icon" class="icon"><span>Logout</span></li>
+            	</ul>
+
+          </div>
         </md-sidenav>
-        <md-content  layout-fill>
-          <md-toolbar class="md-theme-indigo" flex>
+        <md-content  layout-fill  class="Contenido">
+          <md-toolbar class="md-theme-indigo" style="background-color:#CFD8DC; color:#37474F" flex>
             <h1 class="md-toolbar-tools">Contenido</h1>
           </md-toolbar>
+            <div ng-model="divContentMain" layout="row"  layout-align="space-around center"  layout-padding class="">
+              <div >
+                <!--Forms Articulos -->
+                <script src="js/formArticulo.js"></script>
+                <link rel="stylesheet" href="css/formArticulosEstilo1.css">
+                <!-- -->
+                <div ng-controller="formArticulosCtrl"  class="formArticulos md-whiteframe-6dp" layout="column" ng-cloak>
+                  <md-toolbar md-color="#2196F3" class="formArticulosToolBar">
+                    <div class="md-toolbar-tools">
+                      <h2 class="md-flex"><span class="mif-cart">  Ingresar Articulo Nuevo</h2>
+                    </div>
+                  </md-toolbar>
+                  <!--md-theme="TemaDark"-->
+                  <md-content  layout="column" class="formArticulosContent" flex layout-padding>
+                    <div class=""layout="row" layout-align="space-between center">
+                      <md-input-container layout="column" class="formArticuloCampo">
+                        <label>Articulo</label>
+                        <input ng-model="articulo.nombre">
+                      </md-input-container>
+                      <md-input-container layout="column" class="formArticuloCampo">
+                        <label>Fabricante</label>
+                        <input ng-model="articulo.fabricante">
+                      </md-input-container>
+                      <md-input-container layout="column" class="formArticuloCampo">
+                        <label>Serie</label>
+                        <input ng-model="articulo.serie">
+                      </md-input-container>
+                    </div>
+
+                    <div class=""layout="row" layout-align="space-between center">
+                      <md-input-container layout="column" class="formArticuloCampo">
+                        <label>Modelo</label>
+                        <input ng-model="articulo.modelo">
+                      </md-input-container>
+                      <md-input-container layout="column" class="formArticuloCampo">
+                        <label>Factura</label>
+                        <input ng-model="articulo.factura">
+                      </md-input-container>
+                      <md-input-container layout="column" class="formArticuloCampo">
+                        <label>Proveedor</label>
+                        <input ng-model="articulo.proveedor">
+                      </md-input-container>
+                    </div>
+
+                    <div class="" layout="row" layout-align="space-between center">
+                      <md-input-container layout="column" class="formArticuloCampo">
+                        <label>Departamento</label>
+                        <md-select ng-model="articulo.depto">
+                          <md-option ng-repeat="depto in deptos" value="{{depto}}">{{depto}}</md-option>
+                        </md-select>
+                      </md-input-container>
+                      <md-input-container layout="column" class="formArticuloCampo">
+                        <label>Categoria</label>
+                        <md-select ng-model="articulo.categoria">
+                          <md-option ng-repeat="cat in categoria" value="{{cat}}">{{cat}}</md-option>
+                        </md-select>
+                      </md-input-container>
+                      <md-input-container layout="column" class="formArticuloCampo">
+                        <label>Estatus</label>
+                        <md-select ng-model="articulo.estatus">
+                          <md-option ng-repeat="est in estatus" value="{{est}}">{{est}}</md-option>
+                        </md-select>
+                      </md-input-container>
+                    </div>
+
+                    <div class="" layout="row" layout-align="space-between center">
+                      <md-input-container layout="column" class="formArticuloCampo">
+                        <label>Cantidad</label>
+                        <input ng-model="articulo.cantidad" style="min-width: 280px;"  type="number" step="1">
+                      </md-input-container>
+
+                      <md-input-container layout="column" class="formArticuloCampo">
+                        <label>Precio</label>
+                          <input ng-model="articulo.precio" style="min-width: 250px;"  type="number" step="0.01">
+                      </md-input-container>
+                    </div>
+
+                    <div class="" layout="row" layout-align="space-between center">
+                      <md-input-container class="md-block">
+                        <label>Descripcion</label>
+                        <textarea ng-model="articulo.descripcion" md-maxlength="200" rows="3" md-select-on-focus></textarea>
+                      </md-input-container>
+                      <md-input-container class="md-block">
+                        <label>Observaciones</label>
+                        <textarea ng-model="articulo.observaciones" md-maxlength="200" rows="3" md-select-on-focus></textarea>
+                      </md-input-container>
+                    </div>
+                  </md-content>
+                  <md-toolbar md-theme="TemaDark" layout-align="end center"  layout-fill class="formArticulosToolBarFeet">
+                       <md-button  class="md-raised md-primary SumbmintThemeDark">Agregar</md-button>
+                  </md-toolbar>
+               </div>
+
+            </div>
+      <!-- Form2 -->
+      <div >
+        <!--Forms Computadoras -->
+        <script src="js/formComputadora.js"></script>
+        <link rel="stylesheet" href="css/formCompusEstilo1.css">
+        <!-- -->
+        <div ng-controller="formComputadoraCtrl" class="formCompus md-whiteframe-6dp" layout="column" ng-cloak>
+          <md-toolbar md-color="#2196F3" class="formCompusToolBar">
+            <div class="md-toolbar-tools">
+                 <h2 class="md-flex"><span class="mif-local-service">  Ingresar Computadora Nueva</h2>
+            </div>
+          </md-toolbar>
+          <!--md-theme="TemaDark"-->
+          <md-content  layout="column" class="formCompusContent" flex layout-padding>
+            <div class=""layout="row" layout-align="space-between center">
+              <md-input-container layout="column" class="formCompusCampo">
+                <label>Fabricante</label>
+                <input ng-model="computadora.fabricante">
+              </md-input-container>
+              <md-input-container layout="column" class="formCompusCampo">
+                <label>Serie</label>
+                <input ng-model="computadora.serie">
+              </md-input-container>
+              <md-input-container layout="column" class="formCompusCampo">
+                <label>Modelo</label>
+                <input ng-model="computadora.modelo">
+              </md-input-container>
+            </div>
+
+            <div class=""layout="row" layout-align="space-between center">
+              <md-input-container layout="column" class="formCompusCampo">
+                <label>Factura</label>
+                <input ng-model="computadora.factura">
+              </md-input-container>
+              <md-input-container layout="column" class="formCompusCampo">
+                <label>Proveedor</label>
+                <input ng-model="computadora.proveedor">
+              </md-input-container>
+              <md-input-container layout="column" class="formCompusCampo">
+                <label>Departamento</label>
+                <md-select ng-model="computadora.depto">
+                  <md-option ng-repeat="depto in deptos" value="{{depto}}">{{depto}}</md-option>
+                </md-select>
+              </md-input-container>
+            </div>
+
+            <div class="" layout="row" layout-align="space-between center">
+
+              <md-input-container layout="column" class="formCompusCampo">
+                <label>Categoria</label>
+                <md-select ng-model="computadora.categoria">
+                  <md-option ng-repeat="cat in categoria" value="{{cat}}">{{cat}}</md-option>
+                </md-select>
+              </md-input-container>
+              <md-input-container layout="column" class="formCompusCampo">
+                <label>Estatus</label>
+                <md-select ng-model="computadora.estatus">
+                  <md-option ng-repeat="est in estatus" value="{{est}}">{{est}}</md-option>
+                </md-select>
+              </md-input-container>
+            </div>
+
+            <div class="" layout="row" layout-align="space-between center">
+              <md-input-container layout="column" class="formCompusCampo">
+                <label>Cantidad</label>
+                <input ng-model="computadora.cantidad" style="min-width: 280px;"  type="number" step="1">
+              </md-input-container>
+
+              <md-input-container layout="column" class="formCompusCampo">
+                <label>Precio</label>
+                  <input ng-model="computadora.precio" style="min-width: 250px;"  type="number" step="0.01">
+              </md-input-container>
+            </div>
+
+            <div class="" layout="row" layout-align="space-between center">
+              <md-input-container class="md-block">
+                <label>Descripcion</label>
+                <textarea ng-model="computadora.descripcion" md-maxlength="200" rows="3" md-select-on-focus></textarea>
+              </md-input-container>
+              <md-input-container class="md-block">
+                <label>Observaciones</label>
+                <textarea ng-model="computadora.observaciones" md-maxlength="200" rows="3" md-select-on-focus></textarea>
+              </md-input-container>
+            </div>
+
+              <div class="">
+                <md-content>
+                  <md-list class="formCompuList" >
+                  <md-list-item class="formCompuListItem md-2-line" ng-click="null">
+                            <span class="formCompuIconList mif-calculator mif-2x"></span>
+                            <div class="md-list-item-text" layout="column">
+                              <label>CPU</label>
+                              <md-input-container>
+                                 <input pplaceholder="CPU" ng-model="computdora.cpu">
+                               </md-input-container>
+                            </div>
+                  </md-list-item>
+                  <md-list-item class="formCompuListItem md-2-line" ng-click="null" layout="row">
+                            <span class="formCompuIconList mif-equalizer mif-2x "></span>
+                            <div class="md-list-item-text" layout="column">
+                              <label>RAM</label>
+                              <md-input-container>
+                                 <input ng-model="computdora.ram">
+                               </md-input-container>
+                            </div>
+                  </md-list-item>
+                  <md-list-item class="formCompuListItem md-2-line" ng-click="null" layout="row">
+                            <span class="formCompuIconList mif-display mif-2x "></span>
+                            <div class="md-list-item-text" layout="column">
+                              <label>VIDEO</label>
+                              <md-input-container>
+                                 <input ng-model="computdora.ram">
+                               </md-input-container>
+                            </div>
+                  </md-list-item>
+                </md-list>
+                </md-content>
+              </div>
+          </md-content>
+          <md-toolbar md-theme="TemaDark" layout-align="end center"  layout-fill class="formCompusToolBarFeet">
+               <md-button  class="md-raised md-primary SumbmintThemeDark">Agregar</md-button>
+          </md-toolbar>
+       </div>
+    </div>
+
+          </div>
         </md-content>
       </div>
   </body>
