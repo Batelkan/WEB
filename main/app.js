@@ -1,5 +1,8 @@
-var app = angular.module('app', ['ngMaterial'])
-.config(function($mdThemingProvider) {
+
+
+  var app = angular.module('app', ['ngMaterial','ngScrollbars']);
+
+app.config(function($mdThemingProvider) {
   $mdThemingProvider.theme('default')
     .primaryPalette('blue')
     .accentPalette('pink');
