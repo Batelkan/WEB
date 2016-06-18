@@ -3,9 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>PAGOS DESUR</title>
-    <script src="../angular/angular.min.js" ></script>
-    <script src="../jquery/jquery-1.12.4.min.js" ></script>
+    <!--
+       <script src="../angular/angular.min.js" ></script>
+        <script src="../jquery/jquery-1.12.4.min.js" ></script>-->
+    <!--scrollbar-->
+    <link rel="stylesheet" href="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" type="text/css"/>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="bower_components/ng-scrollbars/dist/scrollbars.min.js"></script>
+
+    <!--Angular-->
     <script  src="app.js"></script>
+
     <!--Estilos-->
       <link rel="stylesheet" href="css/estilo1.css">
       <link rel="stylesheet" href="css/style_menu.css">
@@ -246,9 +256,9 @@
               </md-input-container>
             </div>
 
-              <div class="">
+              <div class="" >
                 <md-content>
-                  <md-list class="formCompuList" >
+                  <md-list class="formCompuList" ng-scrollbars ng-scrollbars-config="ngScrollConfDark" >
                   <md-list-item class="formCompuListItem md-2-line" ng-click="null">
                             <span class="formCompuIconList mif-calculator mif-2x"></span>
                             <div class="md-list-item-text" layout="column">
@@ -268,7 +278,7 @@
                             </div>
                   </md-list-item>
                   <md-list-item class="formCompuListItem md-2-line" ng-click="null" layout="row">
-                            <span class="formCompuIconList mif-display mif-2x "></span>
+                            <span class="formCompuIconList mif-display   mif-2x "></span>
                             <div class="md-list-item-text" layout="column">
                               <label>VIDEO</label>
                               <md-input-container>
