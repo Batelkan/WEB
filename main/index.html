@@ -12,7 +12,10 @@
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="bower_components/ng-scrollbars/dist/scrollbars.min.js"></script>
-
+    <!--Angular Route -->
+    <script src="js/angular-route.min.js"></script>
+    <!--Font Awsome-->
+    <script src="https://use.fontawesome.com/b5838ef2af.js"></script>
     <!--Angular-->
     <script  src="app.js"></script>
 
@@ -31,7 +34,7 @@
       <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
       <!--Metro CSS3-->
        <script src="js/metro.js"></script>
-        <script src="js/require.js"></script>
+        <!--<script src="js/require.js"></script>-->
     <!-- Menu -->
        <script src="js/script_menu.js"></script>
        <script src="js/retina.min.js"></script>
@@ -283,6 +286,42 @@
                               <label>VIDEO</label>
                               <md-input-container>
                                  <input ng-model="computdora.ram">
+                               </md-input-container>
+                            </div>
+                  </md-list-item>
+                  <md-list-item class="formCompuListItem md-2-line" ng-click="null" layout="row">
+                            <span class="formCompuIconList mif-drive   mif-2x "></span>
+                            <div class="md-list-item-text" layout="column">
+                              <label>AlMACENAMIENTO</label>
+                              <md-input-container>
+                                 <input ng-model="computdora.almacenainto">
+                               </md-input-container>
+                            </div>
+                  </md-list-item>
+                  <md-list-item class="formCompuListItem md-2-line" ng-click="null" layout="row">
+                            <span class="formCompuIconList mif-share   mif-2x "></span>
+                            <div class="md-list-item-text" layout="column">
+                              <label>RED</label>
+                              <md-input-container>
+                                 <input ng-model="computdora.red">
+                               </md-input-container>
+                            </div>
+                  </md-list-item>
+                  <md-list-item class="formCompuListItem md-2-line" ng-click="null" layout="row">
+                            <span class="formCompuIconList mif-floppy-disk   mif-2x "></span>
+                            <div class="md-list-item-text" layout="column">
+                              <label>LECTORES</label>
+                              <md-input-container>
+                                 <input ng-model="computdora.lectores">
+                               </md-input-container>
+                            </div>
+                  </md-list-item>
+                  <md-list-item class="formCompuListItem md-2-line" ng-click="null" layout="row">
+                            <span class="formCompuIconList mif-list-numbered   mif-2x "></span>
+                            <div class="md-list-item-text" layout="column">
+                              <label>OTROS</label>
+                              <md-input-container>
+                                 <input ng-model="computdora.otros">
                                </md-input-container>
                             </div>
                   </md-list-item>

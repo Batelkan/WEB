@@ -1,6 +1,13 @@
 
+var app = angular.module('app', ['ngMaterial','ngRoute','ngScrollbars']);
 
-  var app = angular.module('app', ['ngMaterial','ngScrollbars']);
+app.config(['$routeProvider', function($routeProvider) {
+$routeProvider
+.when('/', {
+templateUrl: 'views/home.html',
+controller: 'HomeController'
+});
+}]);
 
 app.config(function($mdThemingProvider) {
   $mdThemingProvider.theme('default')
