@@ -47,3 +47,7 @@ return {
       } }]);
 
   app.desactivado('')
+
+  app.MensajeNuevo = new function(){
+    console.log("Mesaje nuevo");
+  }
