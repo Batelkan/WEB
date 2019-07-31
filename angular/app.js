@@ -51,3 +51,7 @@ return {
   app.MensajeNuevo = new function(){
     console.log("Mesaje nuevo");
   }
+
+  app.MensajeNuevo2 = new function(){
+    console.log("Mesaje nuevo");
+  }
