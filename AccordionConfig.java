@@ -246,6 +246,12 @@ public class AccordionConfig
             case MainUI.MODULE_CREDIT_VIEW:
                 module  = new CreditsView(ui);
                 break;
+            case MainUI.MODULE_SEARCH_FREEDIS_CAMPAIGN:
+                module = new FreedisCampaignViewModule(ui, sessionUuid);
+                break;
+            case MainUI.MODULE_CREDIT_VIEW:
+                module  = new CreditsView(ui);
+                break;
             default:
                 Notification.show("Not module to show!");
                 break;
